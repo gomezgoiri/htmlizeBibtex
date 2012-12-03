@@ -3,8 +3,8 @@ HtmlizeBibtex
 
 **HtmlizeBibtex** is made up of the following scripts:
 
- * *bibtex2html.py*: Formats into HTML (avoiding tables).
- * *htmlizeBibtex.js*: Generates inline citations.
+ * *bibtex2html.py*: Formats Bibtex content into HTML (avoiding tables).
+ * *htmlizeBibtex.js*: Generates labels for inline citations. When those labels are clicked a dialog appears/disappears. This dialog contains the referred citation in a readable format .
 
 
 Dependencies
