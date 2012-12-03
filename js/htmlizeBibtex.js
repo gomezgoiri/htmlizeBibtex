@@ -35,7 +35,7 @@ $(document).ready(function() {
   
   $('span.cite').each(
      function(index) {
-       var citeid = $(this).text();
+       var citeid = $.trim($(this).text());
        
       $(getHTMLCodeForCite(citeid)).insertBefore(this);
       

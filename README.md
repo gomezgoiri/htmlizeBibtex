@@ -13,3 +13,4 @@ Dependencies
  * [bibtex2html](http://www.lri.fr/~filliatr/bibtex2html/)
  * [jQuery](http://jquery.com/)
  * [jQueryUI](http://jqueryui.com/)
+ * [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
