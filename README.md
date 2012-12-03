@@ -14,16 +14,15 @@ These are generic instructions to use citations inside your html file. You can f
 ### CSS
 Add the CSS in the &lt;head&gt; tag.
 
-  <link rel="stylesheet" href="css/htmlizeBibtex.css" />
-  <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css" />
-  <script type="text/javascript" src="js/jquery-1.8.3.min.js">
+    <link rel="stylesheet" href="css/htmlizeBibtex.css" />
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.9.2.custom.min.css" />
 
 ### JavaScript
 Add the JavaScript files in the &lt;head&gt; tag.
 
-  <script type="text/javascript" src="js/htmlizeBibtex.js"></script>
-  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-  <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="js/htmlizeBibtex.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
   
 ### HTML
 Wherever you want to cite in your html file, use the citation id as it appears in the bibtex file.
