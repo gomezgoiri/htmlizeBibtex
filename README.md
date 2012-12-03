@@ -29,14 +29,14 @@ Wherever you want to cite in your html file, use the citation id as it appears i
 
     ... and here it comes a citation <span class="cite">{citation_id}</span>. Blah blah...
 
-And add this once as a child of the &lt;body&gt; tag.
+Finally, add this once as a child of the &lt;body&gt; tag.
 
     <div id="citations">
     </div>
 
 
 ## Generate cites
-Execute the following command:
+To populate *#citations* tag, execute the following command:
 
     python bibtex2html.py [path/to/bibtex-file] [path/to/html-with-citations]
 
