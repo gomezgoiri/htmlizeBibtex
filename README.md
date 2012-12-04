@@ -49,9 +49,13 @@ For example, to insert an icon for each citation insert the following HTML snipp
 
 
 ## Generate cites
-To populate *#citations* tag, execute the following command:
+To populate *#citations* tag of an HTML file, execute the following command:
 
-    python bibtex2html.py [path/to/bibtex-file] [path/to/html-with-citations]
+    python bibtex2html.py -f [path/to/target-html-with-citations] [path/to/bibtex-file]
+
+If you prefer to just generate the HTML snippet and manually insert it later on, simply run:
+
+    python bibtex2html.py [path/to/bibtex-file]
 
 
 ## Dependencies
