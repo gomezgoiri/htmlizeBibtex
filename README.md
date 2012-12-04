@@ -34,6 +34,19 @@ Finally, add this once as a child of the &lt;body&gt; tag.
     <div id="citations">
     </div>
 
+## Customize
+To customize the behavior of *htmlizeBibtex* redefine **htmlizeBibtex.config** at the end of the body.
+*HtmlizeBibtex.config* contains the following attributes:
+
+ * **inline_citation**: Used to customize the inline elements inserted in the HTML. You can redefine a string where a simple replacement is performed for the variable *$citeid*.
+
+
+For example, to insert an icon for each citation insert the following HTML snippet:
+
+    <script type="text/javascript">
+      htmlizeBibtex.config.inline_citation = '<img src="css/images/papers.png" alt="$citeid" />'
+    </script>
+
 
 ## Generate cites
 To populate *#citations* tag, execute the following command:
