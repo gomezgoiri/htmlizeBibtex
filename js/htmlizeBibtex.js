@@ -20,29 +20,24 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  **********************************************************************************************************************/
 
-
-function getHTMLCodeForCite(citeid) {
-  if(mode=="textual")
-    return '<span class="show_citation"> [' + citeid + '] </span>'
-  return '<span class="show_citation"> [pretty_image] </span>'
-}
+var htmlizeBibtex = {
+  "config": {
+    "inline_citation": "[$citeid]"
+  }
+};
 
 $(document).ready(function() {
-  
-  if (typeof mode === 'undefined') { // char with "textual" or "graphic"
-    mode = "textual"; // textual or graphic
-  }
   
   $('span.cite').each(
      function(index) {
        var citeid = $.trim($(this).text());
        
-      $(getHTMLCodeForCite(citeid)).insertBefore(this);
-      
-      $(this).prev().attr('dialog-opened', 'false');
-      
-      $(this).prev().on("click",
-	function(event){
+       var inlineCitationElement = htmlizeBibtex.config.inline_citation.replace("$citeid",citeid);
+       $('<span class="show_citation">' + inlineCitationElement + '</span>').insertBefore(this);
+       
+       $(this).prev().attr('dialog-opened', 'false');
+       
+       $(this).prev().on("click", function(event){
 	  var cite_selector = '#'+citeid;
 	  
 	  if( $(this).attr('dialog-opened')=='true' ){
@@ -54,15 +49,14 @@ $(document).ready(function() {
 	  }
 	  // dialog('isOpen') does not work before calling to dialog() to create it
 	  //alert( $('#'+citeid).text() );
-	}
-      );
+	});
       
       
-      $(this).hide();
+	$(this).hide();
       
-      //$(this).replaceWith($('#'+$(this).text()).text());
+	//$(this).replaceWith($('#'+$(this).text()).text());
       
-      //$("#"+$(this).text()).dialog({ title: "Citation info" });
+	//$("#"+$(this).text()).dialog({ title: "Citation info" });
      }
   );
 
